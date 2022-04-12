@@ -18,7 +18,12 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('gender');
             $table->date('date_birth');
-            $table->string('city_id');
+
+
+            $table->foreignId('city_id')->nullable()->index();
+            $table->foreign('city_id')->references('id')->on('states')
+            ->onUpdate('cascade')->onDelete('cascade');
+
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
