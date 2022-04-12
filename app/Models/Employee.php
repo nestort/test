@@ -14,7 +14,9 @@ class Employee extends Model
      * @var string[]
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
+        'date_birth',
     ];
 
     /**
@@ -32,6 +34,6 @@ class Employee extends Model
      * @var array
      */
     protected $casts = [
-
+        'date_birth' => 'date',
     ];
 }

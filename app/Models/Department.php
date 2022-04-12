@@ -14,9 +14,7 @@ class Department extends Model
      * @var string[]
      */
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'date_birth',
+        'name',
     ];
 
     /**
@@ -34,6 +32,6 @@ class Department extends Model
      * @var array
      */
     protected $casts = [
-        'date_birth' => 'date',
+
     ];
 }
