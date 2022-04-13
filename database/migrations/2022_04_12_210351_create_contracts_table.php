@@ -16,18 +16,30 @@ return new class extends Migration
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
             $table->date('begin');
-            $table->date('end');
-            $table->string('description');
-            $table->foreignId('employee_id')->nullable()->index();
-            $table->foreign('employee_id')->references('id')->on('employees')
-            ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('company_id')->nullable()->index();
-            $table->foreign('company_id')->references('id')->on('companies')
-            ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('department_id')->nullable()->index();
-            $table->foreign('department_id')->references('id')->on('departments')
-            ->onUpdate('cascade')->onDelete('cascade');
+            $table->date('end')->nullable();
+            $table->string('description')->nullable();
+            $table->foreignId('employee_id')->index();
+            $table->foreignId('company_id')->index();
+            $table->foreignId('department_id')->index();
             $table->timestamps();
+
+            $table->foreign('employee_id')
+                ->references('id')
+                ->on('employees')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('company_id')
+                ->references('id')
+                ->on('companies')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('department_id')
+                ->references('id')
+                ->on('departments')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 
