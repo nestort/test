@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
 
 
             $table->foreignId('city_id')->nullable()->index();
-            $table->foreign('city_id')->references('id')->on('states')
+            $table->foreign('city_id')->references('id')->on('cities')
             ->onUpdate('cascade')->onDelete('cascade');
 
             $table->string('email')->unique();
