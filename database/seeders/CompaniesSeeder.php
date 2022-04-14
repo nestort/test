@@ -17,7 +17,7 @@ class CompaniesSeeder extends Seeder
         Company::create(['name'=>'Empresa A']);
         Company::create(['name'=>'Empresa B']);
         Company::create(['name'=>'Empresa C']);
-        Company::factory()->count(50)->create();
+        // Company::factory()->count(50)->create();
 
     }
 }
