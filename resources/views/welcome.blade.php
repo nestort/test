@@ -20,14 +20,14 @@
                 @if (Route::has('login'))
                     <div>
                         @auth
-                            <button class="btn btn-primary">Dashboard</button>
-                            {{-- <a href="{{ url('/dashboard') }}">Dashboard</a> --}}
+                            <button class="btn btn-primary"
+                                onclick="location.href = '{{ url('/dashboard') }}';">Dashboard</button>
                         @else
-                            {{-- <a href="{{ route('login') }}">Inicio de sesión</a> --}}
-                            <button class="btn btn-primary">Inicio sesión</button>
+                            <button class="btn btn-primary" onclick="location.href = '{{ route('login') }}';">Inicio
+                                sesión</button>
                             @if (Route::has('register'))
-                                {{-- <a href="{{ route('register') }}">Registro</a> --}}
-                                <button class="btn btn-primary">Registro</button>
+                                <button class="btn btn-primary"
+                                    onclick="location.href = '{{ route('register') }}';">Registro</button>
                             @endif
                         @endauth
                     </div>
