@@ -16,7 +16,7 @@ GROUP BY employees.id;
 <img alt="terminal output" src="./outputs/1.png">
 
 1.2. Empleados que tengan antigüedad mayor o igual a 2 años y a que empresa pertenecen.
- ---
+
 <code>
 SELECT 
 	employees.id,
@@ -37,12 +37,13 @@ SELECT departments.name FROM departments GROUP BY departments.name;
 <img alt="terminal output" src="./outputs/3.png">
 
 2.1. Leer una cadena de texto en un formulario y generar un array con la función split(). Posteriormente, mostrar la siguiente información: Número de palabras, primera palabra, última palabra, las palabras colocadas en orden inverso, las palabras ordenadas de la a la z y las palabras ordenadas de la z a la a. Sacar toda esta información en una ventana nueva.
- ---
+---
  <img alt="terminal output" src="./outputs/4.png">
  <img alt="terminal output" src="./outputs/5.png">
  <img alt="terminal output" src="./outputs/6.png">
 
-3. Formulario de registro 
+3.1. Formulario de registro 
+---
  <img alt="terminal output" src="./outputs/7.png">
  <img alt="terminal output" src="./outputs/8.png">
 ## License
