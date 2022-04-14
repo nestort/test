@@ -46,6 +46,9 @@ SELECT departments.name FROM departments GROUP BY departments.name;
 ---
  <img alt="terminal output" src="./outputs/7.png">
  <img alt="terminal output" src="./outputs/8.png">
+
+## Demo
+[Demo en linea](https://test0l.herokuapp.com/)
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
